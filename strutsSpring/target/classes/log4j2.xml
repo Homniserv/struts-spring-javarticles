@@ -1,0 +1,2 @@
+<!-- https://github.com/hazelcast/hazelcast/issues/12058 -->
+<!-- change the Default log level of Log4j2 -->
