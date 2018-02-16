@@ -1,5 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>homniserv</groupId>
 	<artifactId>strutsSpring</artifactId>
@@ -12,74 +15,92 @@
 	<!-- http://struts.apache.org/plugins/spring/ -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.5</java.version>
 	</properties>
 	<dependencies>
+
+		<!-- 5 required from CalculatriceStruts -->
+		<!-- commons-logging-1.0.4 -->
+		<!-- freemarker-2.3.8 -->
+		<!-- ognl-2.6.11 -->
+		<!-- struts2-core-2.0.11 -->
+		<!-- xwork-2.0.4 -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-web</artifactId> -->
+		<!-- <version>2.5.6</version> -->
+		<!-- </dependency> -->
+		<!--required no1of5 https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+
+		<!--required no2of5 https://mvnrepository.com/artifact/freemarker/freemarker -->
+		<dependency>
+			<groupId>freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.8</version>
+		</dependency>
+
+		<!--required no3of5 https://mvnrepository.com/artifact/opensymphony/ognl -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>ognl</artifactId>
+			<version>2.6.11</version>
 		</dependency>
 
 
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>2.5.6</version>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-context</artifactId> -->
+		<!-- <version>4.3.11.RELEASE</version> -->
+		<!-- </dependency> -->
+
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-web</artifactId> -->
+		<!-- <version>4.3.11.RELEASE</version> -->
+		<!-- </dependency> -->
 
 
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>4.3.11.RELEASE</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>4.3.11.RELEASE</version>
-		</dependency>
-
-
-
-		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
-	<!-- https://stackoverflow.com/questions/13247450/struts-2-project-deployment-error -->
+		<!--required no4 https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
+		<!-- https://stackoverflow.com/questions/13247450/struts-2-project-deployment-error -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
-			<version>2.1.6</version>
+			<version>2.0.11</version>
 		</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>2.10.0</version>
-			<type>pom</type>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j</artifactId> -->
+		<!-- <version>2.10.0</version> -->
+		<!-- <type>pom</type> -->
+		<!-- </dependency> -->
 
 
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.10.0</version>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j-core</artifactId> -->
+		<!-- <version>2.10.0</version> -->
+		<!-- </dependency> -->
 
 
 		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 		<!-- https://logging.apache.org/log4j/2.0/faq.html -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.10.0</version>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j-api</artifactId> -->
+		<!-- <version>2.10.0</version> -->
+		<!-- </dependency> -->
 
 
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
@@ -92,46 +113,46 @@
 
 
 		<!-- Servlet API Dependency ++++++++++++++++++++++ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet-core -->
-	<!-- https://stackoverflow.com/questions/12339696/java-lang-classnotfoundexception-org-apache-struts-action-actionservlet -->
-<dependency>
-    <groupId>org.glassfish.jersey.containers</groupId>
-    <artifactId>jersey-container-servlet-core</artifactId>
-    <version>2.2</version>
-</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>javax.servlet</groupId> -->
+		<!-- <artifactId>javax.servlet-api</artifactId> -->
+		<!-- <version>3.1.0</version> -->
+		<!-- </dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet-core -->
+		<!-- https://stackoverflow.com/questions/12339696/java-lang-classnotfoundexception-org-apache-struts-action-actionservlet -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+		<!-- <artifactId>jersey-container-servlet-core</artifactId> -->
+		<!-- <version>2.2</version> -->
+		<!-- </dependency> -->
 
 
 
 
 		<!-- https://mvnrepository.com/artifact/com.opensymphony/xwork -->
-		<!-- https://stackoverflow.com/questions/13247450/struts-2-project-deployment-error -->
+		<!-- required no5 https://stackoverflow.com/questions/13247450/struts-2-project-deployment-error -->
 		<dependency>
 			<groupId>com.opensymphony</groupId>
 			<artifactId>xwork</artifactId>
-			<version>2.1.2</version>
+			<version>2.0.4</version>
 		</dependency>
 
 
-	<!-- https://coderanch.com/t/434954/framework/Struts-Application-Unable-load-configuration -->
-<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-<dependency>
-    <groupId>commons-fileupload</groupId>
-    <artifactId>commons-fileupload</artifactId>
-    <version>1.3.1</version>
-</dependency>
+		<!-- https://coderanch.com/t/434954/framework/Struts-Application-Unable-load-configuration -->
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<!-- <dependency> -->
+		<!-- <groupId>commons-fileupload</groupId> -->
+		<!-- <artifactId>commons-fileupload</artifactId> -->
+		<!-- <version>1.3.1</version> -->
+		<!-- </dependency> -->
 
-<!-- http://struts.apache.org/plugins/spring/ -->
-<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin -->
-<dependency>
-    <groupId>org.apache.struts</groupId>
-    <artifactId>struts2-spring-plugin</artifactId>
-    <version>2.1.6</version>
-</dependency>
+		<!-- http://struts.apache.org/plugins/spring/ -->
+		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.struts</groupId> -->
+		<!-- <artifactId>struts2-spring-plugin</artifactId> -->
+		<!-- <version>2.1.6</version> -->
+		<!-- </dependency> -->
 
 	</dependencies>
 	<build>

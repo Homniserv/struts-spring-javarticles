@@ -3,9 +3,15 @@
 <!-- "http://struts.apache.org/dtds/struts-2.0.dtd"> --> <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 	<!-- http://struts.apache.org/plugins/spring/ -->
-	<constant name="struts.objectFactory" value="spring" />
-	 <!-- https://struts.apache.org/getting-started/hello-world-using-struts2.html -->
-	<constant name="struts.devMode" value="true" /> <!-- http://struts.apache.org/plugins/spring/ --> <!-- include file="struts-default.xml" --> <!-- Foo autowired AOP --> <!-- <package name="default" extends="struts-default"> --> <!-- <action name="foo" class="com.acme.Foo"> --> <!-- <result>foo.ftl</result> --> <!-- <result>foo.ftl</result> --> <!-- </action> --> <!-- </package> --> <!-- <package name="secure" namespace="/secure" extends="default"> --> <!-- <action name="bar" class="bar"> --> <!-- <result>bar.ftl</result> -->
+	<!-- <constant name="struts.objectFactory" value="spring" /> -->
+	<!-- https://struts.apache.org/getting-started/hello-world-using-struts2.html -->
+	<constant name="struts.devMode" value="true" />
+	<!-- http://struts.apache.org/plugins/spring/ -->
+	<!-- constant name="struts.objectFactory.spring.autoWire.alwaysRespect" 
+		value="false" -->
+	<!-- include file="struts-default.xml" -->
+	<!-- Foo autowired AOP -->
+	<!-- <package name="default" extends="struts-default"> --> <!-- <action name="foo" class="com.acme.Foo"> --> <!-- <result>foo.ftl</result> --> <!-- <result>foo.ftl</result> --> <!-- </action> --> <!-- </package> --> <!-- <package name="secure" namespace="/secure" extends="default"> --> <!-- <action name="bar" class="bar"> --> <!-- <result>bar.ftl</result> -->
 	<!-- </action> -->
 	<!--https://struts.apache.org/getting-started/hello-world-using-struts2.html -->
 	<package name="basicstruts2" extends="struts-default">
@@ -30,22 +36,36 @@
 		<action name="index">
 			<result>/index286.jsp</result>
 		</action>
-		<action name="hello"
-			class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
-			<result name="success">/HelloWorld.jsp</result>
-		</action>
+		<!-- <action name="hello" -->
+		<!-- class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute"> -->
+		<!-- <result name="success">/HelloWorld.jsp</result> -->
+		<!-- </action> -->
 
-<!-- https://examples.javacodegeeks.com/enterprise-java/struts-2/struts2-action-mapping-example/ -->
+		<!-- https://examples.javacodegeeks.com/enterprise-java/struts-2/struts2-action-mapping-example/ -->
 		<action name="*welcome" class="com.sample.example.action.mapping.LinkAction"
 			method="execute">
 			<result name="success">/welcome.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
-		
+
 		<action name="welcomeMoi" class="com.sample.example.action.mapping.LinkAction"
 			method="execute">
 			<result name="success">/welcome.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+
+
+
+		<action name="i" class="presentation.Controler" method="execute">
+			<result name="success">index.jsp</result>
+			<result name="error">index286.jsp</result>
+		</action>
+
+
+		<action name="struts2f" class="presentation.Controler" method="execute">
+			<result name="success">index.jsp</result>
+			<result name="error">index286.jsp</result>
+		</action>
+
 	</package>
 </struts>
