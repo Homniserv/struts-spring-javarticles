@@ -20,7 +20,8 @@
 	<!-- https://struts.apache.org/core-developers/web-xml.html -->
 	<filter>
 		<filter-name>struts2</filter-name>
-		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	<!-- https://struts.apache.org/core-developers/web-xml.html -->
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
 	</filter>
 
 	<filter-mapping>
@@ -41,17 +42,7 @@
 	</servlet>
 
 
-	<servlet>
-		<servlet-name>action</servlet-name>
-		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
-	</servlet>
 
-
-	<servlet-mapping>
-		<servlet-name>action</servlet-name>
-		<url-pattern>*.do</url-pattern>
-
-	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>contrh</servlet-name>
