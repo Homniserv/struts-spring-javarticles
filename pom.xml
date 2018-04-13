@@ -3,4 +3,194 @@
   <groupId>struts-spring</groupId>
   <artifactId>struts-spring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  
+  
+	<properties>
+		<!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<log4j2.version>2.11.0</log4j2.version>
+
+		<!-- <struts2.version>2.3.15</struts2.version> -->
+		<struts2.version>2.3.1.2</struts2.version>
+
+
+		<!-- <springframework.version>4.3.7.RELEASE</springframework.version> regression 
+			because DispatchActionSupport deprecated no solution in Spring 4 -->
+		<springframework.version>3.2.4.RELEASE</springframework.version>
+	</properties>
+	
+	
+	
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin 
+			https://stackoverflow.com/questions/10735774/struts2-spring-plugin-it-complains-about-getbean-of-webapplicationcontext-no -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>${struts2.version}</version>
+		</dependency>
+
+		<!-- https://struts.apache.org/getting-started/how-to-create-a-struts2-web-application.html -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j-core</artifactId> -->
+		<!-- <version>${log4j2.version}</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j-api</artifactId> -->
+		<!-- <version>${log4j2.version}</version> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j</artifactId> -->
+		<!-- <version>${log4j2.version}</version> -->
+		<!-- <type>pom</type> -->
+		<!-- </dependency> -->
+
+
+
+		<!-- HTTPS://LOGGING.APACHE.ORG/LOG4J/2.X/MAVEN-ARTIFACTS.HTML -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.logging.log4j</groupId> -->
+		<!-- <artifactId>log4j</artifactId> -->
+		<!-- <version>2.11.0</version> -->
+		<!-- <type>pom</type> -->
+		<!-- </dependency> -->
+
+
+
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-core</artifactId> -->
+		<!-- <version>${springframework.version}</version> -->
+		<!-- </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web 
+			already transitive -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-web</artifactId> -->
+		<!-- <version>${springframework.version}</version> -->
+		<!-- </dependency> -->
+
+		<!-- conflicting with Struts -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-webmvc</artifactId> -->
+		<!-- <version>${springframework.version}</version> -->
+
+		<!-- </dependency> -->
+
+
+
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-context</artifactId> -->
+		<!-- <version>${springframework.version}</version> -->
+		<!-- </dependency> -->
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework</groupId> -->
+		<!-- <artifactId>spring-beans</artifactId> -->
+		<!-- <version>${springframework.version}</version> -->
+		<!-- </dependency> -->
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${springframework.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-struts 
+			http://struts.apache.org/plugins/spring/ -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-struts</artifactId>
+			<version>3.2.8.RELEASE</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/antlr/antlr dependency -->
+		<!-- <dependency> -->
+		<!-- <groupId>antlr</groupId> -->
+		<!-- <artifactId>antlr</artifactId> -->
+		<!-- <version>2.7.2</version> -->
+		<!-- </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<finalName>struts2SpringJavarticles</finalName>
+	</build>
 </project>
